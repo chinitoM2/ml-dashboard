@@ -8,10 +8,10 @@ from tri_table_summary import create_tabletop_summary
 from tri_table_summary import create_table_w_base_summary
 
 def create_tri_report(df):
-  mirror_orders = df[df['Frame_Number'].notna()]
-  table_orders = df[df['TableTop_Number'].notna()]
-  table_with_base_orders = table_orders[table_orders['TableLeg_Number'].notna()]
-  shipping_companies = df[df['shipping companies'] != 'other or tracking number only']
+  mirror_orders = df[df['frame_number'].notna()]
+  table_orders = df[df['tabletop_number'].notna()]
+  table_with_base_orders = table_orders[table_orders['tableleg_number'].notna()]
+  shipping_companies = df[df['shipping_companies'] != 'other or tracking number only']
   valid_lead_date_first_visit = df[df['lead_date_first_visit'].notna()]
   # MIRROR SUMMARY (most purchased WxH, width, height, frame)
   create_mirror_summary(mirror_orders)
