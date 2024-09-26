@@ -20,7 +20,7 @@ def create_tri_report(df):
   # TABLE TOP SUMMARY (most purchased LxW, length, width, lumbar material)
   create_tabletop_summary(table_orders)
   # TRACKING NUMBER (list shipping companies from most 2 least, excluding qty>5)
-  create_shipping_companies_summary(shipping_companies)
+  create_shipping_companies_summary(shipping_companies, 5)
   # MOST COMMON PRODUCTION TIMES
   calc_production_times(df)
   # MOST COMMON CUSTOMER DECISION TIME BY DAYS
